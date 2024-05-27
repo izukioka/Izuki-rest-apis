@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<title>Denpai Make your bot good </title>
+<style>
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #111;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    width: 100%;
+    padding: 20px;
+    background-color: #00EB23;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: crimson;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+}
+  h1 {
+    color: #ffffff;
+    text-align: center;
+  }
+  h2 {
+    color: #ffffff;
+    margin-top: 20px;
+  }
+  p {
+    line-height: 1.6;
+    color: #ffffff;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    margin-bottom: 10px;
+  }
+  pre {
+    background-color: #f0f6ff;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+  }
+  .btn-container {
+    margin-top: 20px;
+  }
+  .menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.navbar .logo a{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .logo a span{
+    color: crimson;
+    transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span{
+    color: #fff;
+}
+  .btn {
+    display: block;
+    width: calc(100% - 40px);
+    margin: 3px;
+    background-color: #303030;
+    color: #fff;
+    border: none;
+    padding: 13px;
+    text-align: left;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  footer{
+        color: #000;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+        
+  
+</style>
+</head>
+<body>
+	 <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="#">Denpai <span>APIs</span></a></div>
+            <ul class="menu">
+                <li><a href="/" class="menu-btn">Home</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+<div class="container">
+  <h1>Documentasion</h1>
+  <div id="MyClockDisplay" class="clock" onload="showTime()">,</div>
+  <p>Selamat Datang Di Rest APIs Saya, Xynz API adalah website yang dibuat oleh Vanz(TamaX) Untuk Menambahkan Fitur WhatsApp bot atau lain-lain, website ini tidak menggunakan apikey, 100% no limit dan free</p>
+  
+  <h2>• Downloader</h2>
+  <div class="btn-container">
+    <a href="/api/tiktokdl?url=" class="btn">tiktokdl</a>
+    <a href="/api/ytdl?url=" class="btn">youtubedl</a>
+    <a href="/api/mediafire?url=" class="btn">mediafire</a>
+  </div>
+  <h2>• Artificial Intelligence</h2>
+  <div class="btn-container">
+    <a href="/api/openai?text=hai" class="btn">/api/openai</a>
+    <a href="/api/ragbot?text=hai" class="btn">/api/ragbot</a>
+    <a href="/api/degreeguru?text=hai" class="btn">/api/degreeguru</a>
+    <a href="/api/pinecone?text=hai" class="btn">/api/pinecone</a>
+    <a href="/api/smartcontract?text=hai" class="btn">/api/smartcontract</a>
+    <a href="/api/blackboxAIChat?text=hai" class="btn">/api/blackboxAIChat</a>
+  </div>
+  
+<footer>
+            <p class="footer__copy">&#169; 2024 Denpai All right reserved.</p>
+        </footer>
+  
+ <!-- <h2>Usage</h2>
+  <p>To use the endpoints, send a GET request to the desired endpoint with the following query parameter:</p>
+  <ul>
+    <li>message: Your message content</li>
+  </ul>
+  
+  <h2>Thanks To</h2>
+  <p>The response will be in JSON format with the following structure:</p>
+  <pre>
+  {
+    "status": 200,
+    "creator": "ChatGPT",
+    "data": {
+      "response": "Response data here"
+    }
+  }
+  </pre>
+</div> -->
+<script>
+    function showTime() {
+      const date = new Date();
+      const h = date.getHours(); 
+      const m = date.getMinutes(); 
+      const s = date.getSeconds(); 
+      const time = h + ":" + m + ":" + s;
+      document.getElementById("MyClockDisplay").innerText = time;
+      setTimeout(showTime, 1000);
+  }
+
+  showTime();
+</script>
+</body>
+</html>
